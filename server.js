@@ -15,12 +15,14 @@ app.use(bodyParser.json({extended:true})) ;
 app.use(bodyParser.urlencoded({extended:true})) ;
 app.use('/',Router) ;
 
-const PORT = process.env.PORT || 8000 ;
+// const PORT = process.env.PORT || 8000 ;
+const PORT =  8000 ;
 
-const USERNAME = process.env.DB_USERNAME ;
-const PASSWORD = process.env.DB_PASSWORD ; 
+// const USERNAME = process.env.DB_USERNAME ;
+// const PASSWORD = process.env.DB_PASSWORD ; 
 
-const URL =  process.env.MONGODB_URI || `mongodb+srv://${USERNAME}:${PASSWORD}@cluster0.wgdzjmo.mongodb.net/Flipkart_Clone?retryWrites=true&w=majority` ;
+// const URL =  process.env.MONGODB_URI || `mongodb+srv://${USERNAME}:${PASSWORD}@cluster0.wgdzjmo.mongodb.net/Flipkart_Clone?retryWrites=true&w=majority` ;
+const URL = `mongodb+srv://${USERNAME}:${PASSWORD}@cluster0.wgdzjmo.mongodb.net/Flipkart_Clone?retryWrites=true&w=majority` ;
 
 Connection( URL );
 
